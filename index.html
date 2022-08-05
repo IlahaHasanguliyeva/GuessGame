@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess Game</title>
+    <!-- style -->
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+        <!-- start screen ------------------------------------------------>
+      <div class="start">
+            <div class="startScreen">
+                <div class="center">
+                    <button class="startBtn">Start Game!</button>
+                </div>
+            </div>
+        </div>
+        <!-- game screen ------------------------------------------------>
+      <div class="game">
+        <div class="top">
+          <button class="restart border">Restart</button>
+          <span>Between 1 and 50</span>
+        </div>
+        <h1>✨ Guess the Number! ✨</h1>
+        <h2 class="secretNumber border">?</h2>
+        <!-- input and scores ------------------------------------------------>
+        <div class="play">
+          <div class="left">
+            <input class="input border" type="number" />
+            <button class="check border">Check!</button>
+          </div>
+          <div class="right">
+            <p class="tips">🧐 Start guessing...</p>
+            <span
+              >🍀 Score:
+              <span class="score">20</span>
+            </span>
+            <span>
+              🥇 HighScore:
+              <span class="highScore">0</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./assets/js/index.js"></script>
+  </body>
+</html>

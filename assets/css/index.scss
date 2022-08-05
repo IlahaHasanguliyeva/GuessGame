@@ -1,0 +1,130 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Press Start 2P";
+  cursor: default;
+}
+main {
+  height: 100vh;
+  background-color: #f5dc6f;
+}
+
+.start {
+  height: 100vh;
+  background-color: #f5dc6f;
+  .startScreen {
+    width: 70%;
+    height: 48%;
+    border: 5px solid #f3b95f;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    .center {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      button {
+        padding: 16px 24px;
+        background-color: #f5dc6f;
+        border: 3px solid #f3b95f;
+        font-size: 20px;
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 15px;
+  color: white;
+  .restart {
+    padding: 16px 24px;
+    background-color: white;
+    border: 3px solid #f3b95f;
+    font-size: 20px;
+    color: #f3b95f;
+    cursor: pointer;
+  }
+}
+
+h1 {
+  font-size: 32px;
+  text-align: center;
+  margin: 30px;
+  color: white;
+}
+
+.secretNumber {
+  width: fit-content;
+  padding: 18px 26px;
+  background-color: white;
+  border: 3px solid #f3b95f;
+  font-size: 36px;
+  color: #f5dc6f;
+  margin: auto;
+}
+
+.play {
+  width: 70%;
+  margin-top: 26px;
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 26px;
+    input {
+      padding: 50px;
+      width: 230px;
+      height: 80px;
+      border: 3px solid #f3b95f;
+      outline: none;
+      font-size: 40px;
+      color: #f3b95f;
+      cursor: text;
+    }
+    .check {
+      padding: 14px 20px;
+      background-color: white;
+      border: 3px solid #f3b95f;
+      font-size: 18px;
+      color: #f3b95f;
+      cursor: pointer;
+      margin: 20px;
+    }
+  }
+  .right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    p {
+      color: white;
+      font-size: 16px;
+      margin-bottom: 26px;
+    }
+    span {
+      color: white;
+      font-size: 16px;
+      margin: 26px 0;
+    }
+  }
+}
