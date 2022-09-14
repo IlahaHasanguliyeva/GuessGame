@@ -3,9 +3,11 @@
 // start screen-------------------------------------
 const startBtn = document.querySelector(".startBtn");
 const start = document.querySelector(".start");
+const gamePg = document.querySelector(".game")
 
 startBtn.addEventListener("click", function () {
   start.classList.add("hide");
+  gamePg.classList.remove("hide");
 });
 
 // play----------------------------------------------
@@ -18,7 +20,8 @@ let secretNumber = document.querySelector(".secretNumber");
 
 const border = document.querySelectorAll(".border")
 
-const number = Math.trunc(Math.random() * 50 + 1);
+let number = Math.trunc(Math.random() * 50 + 1);
+console.log(number);
 
 let score = 20;
 function calcScore() {
@@ -34,11 +37,16 @@ function setHighScore() {
 }
 
 const again = function () {
+  number = Math.trunc(Math.random() * 50 + 1);
+  console.log(number)
   document.querySelector(".input").value = "";
   score = 20;
   document.querySelector(".score").textContent = score;
-  document.querySelector(".highScore").textContent = 0;
   color.style.backgroundColor = "#f5dc6f";
+  for (let index = 0; index < border.length; index++) {
+    border[index].style.borderColor = "#f3b95f";
+    border[index].style.color = "#f3b95f";
+  }
   secretNumber.textContent = "?";
   text.textContent = "✨ Guess the Number! ✨";
   message.textContent = "🧐 Start guessing...";
@@ -67,8 +75,15 @@ function gameLogic() {
       calcScore();
     }
   } else {
-    message.textContent = "You lost the game!";
+    message.textContent = "try again!";
+    text.textContent = "You lost the game!";
     document.querySelector(".score").textContent = 0;
+    color.style.backgroundColor = "#ca0404";
+    secretNumber.textContent = number;
+    for (let index = 0; index < border.length; index++) {
+      border[index].style.borderColor = "#e32929";
+      border[index].style.color = "#ca0404";
+    }
   }
 }
 
